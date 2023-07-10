@@ -4,6 +4,14 @@ Collection of documents translating Skylark Legacy's API calls to Skylark's Grap
 
 Full API documentation: https://docs.skylarkplatform.com/
 
+## Contents:
+
+*Note: Recommend you read the ["Read this first"](#read-this-first) section as it covers a few common parts of Skylark that isn't covered in the individual files.*
+
+- [Seasons](./Seasons.md)
+- [Tags](./Tags.md)
+- [Tag Categories](./TagCategories.md)
+
 ## Read this first:
 
 ### Authentication
@@ -14,6 +22,16 @@ A member of the Customer Success team will supply you with a number of API keys 
 If you require more, we can generate these for you.
 
 Documentation on how to use the API Keys and what the permission levels mean: https://docs.skylarkplatform.com/docs/authentication
+
+---
+
+### Built-in Skylark Object Types
+
+Some Object Types in your Skylark account are built-in meaning that you are unable to add fields to them.
+
+You can identify these as they are prefixed with `Skylark` or in the Skylark UI have a `sl` following their display name.
+
+Of the Object Types migrated from your Skylark Legacy, only Tags (`SkylarkTag`) are built-in.
 
 ---
 
