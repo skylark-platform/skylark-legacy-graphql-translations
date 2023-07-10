@@ -137,6 +137,6 @@ More on pagination: https://docs.skylarkplatform.com/docs/introduction-6#get-nex
 
 ### Common Query arguments
 
-1. `limit`: The number of items to receive back in a list query. Anything from 1-50 (anything higher will return 50).
-2. `next_token`: See previous section, on subsequent list queries you provide a `next_token` which Skylark uses to get the next page of objects.
-3. `language`: The request language. If this isn't supplied it will default to the default account language of `en`.
+1. `limit`: The number of items to receive back in a list query. Anything from 1-50 (anything higher will return 50) - Defaults to `10`.
+2. `next_token`: See previous section, on subsequent list queries you provide a `next_token` which Skylark uses to get the next page of objects - Defaults to `null`.
+3. `language`: The request language - Defaults to the account default (`en` in your case).
