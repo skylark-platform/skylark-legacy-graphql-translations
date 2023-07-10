@@ -32,6 +32,8 @@ query MyQuery {
 }
 ```
 
+*Note: Skylark uses the [ULID](https://github.com/ulid/spec) spec for it's UIDs*
+
 #### Using the External ID:
 
 ```graphql
@@ -43,7 +45,7 @@ query MyQuery {
 }
 ```
 
-Note: All objects migrated to your account from Skylark Legacy use their old UID as the External ID.
+*Note: All objects migrated to your account from Skylark Legacy use their old UID as the External ID.*
 
 ---
 
@@ -76,10 +78,7 @@ query MyQuery {
 }
 ```
 
-*A note on `__typename`*
-
-In the example above, we're getting back two fields which are available on all objects regardless of type. `uid` and `__typename`.
-`__typename` is a built-in GraphQL field which we can use this later to determine the type of the object, in this case either `Episode` or `Movie`.
+*Note on `__typename`: In the example above, we're retrieving two fields which are available on all objects regardless of type. `uid` and `__typename`. `__typename` is a built-in GraphQL field which we can use this later to determine the type of the object, in this case it'll be `Episode` or `Movie`.*
 
 More on this:
 
