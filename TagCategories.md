@@ -1,6 +1,5 @@
-# Tags
+# Tag Categories
 
-*Tags are a built-in Skylark Object Type*
 
 Contents:
 

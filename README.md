@@ -4,7 +4,7 @@ Collection of documents translating Skylark Legacy's API calls to Skylark's Grap
 
 Full API documentation: https://docs.skylarkplatform.com/
 
-## Contents:
+## Contents:
 
 *Note: Recommend you read the ["Read this first"](#read-this-first) section as it covers a few common parts of Skylark that isn't covered in the individual files.*
 
