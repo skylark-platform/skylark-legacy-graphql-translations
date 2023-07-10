@@ -69,6 +69,8 @@ More information on Search and the `limit_search_fields` argument: https://docs.
 
 If this doesn't work for you, contact our customer success team.
 
+---
+
 ## List Tag Categories
 
 ### Legacy
