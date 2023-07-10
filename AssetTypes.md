@@ -11,6 +11,8 @@ Contents:
 - [List Asset Types](#list-asset-types)
 - [List Assets by Asset Type](#list-assets-by-asset-type)
 
+---
+
 ## List Asset Types
 
 ### Legacy
@@ -19,9 +21,9 @@ Contents:
 
 ### GraphQL
 
-As hinted at before, there isn't a query to get the Asset Types in Skylark.
+There isn't a dedicated query to fetch the Asset Types in Skylark.
 
-Instead, you can use [Introspection](https://graphql.org/learn/introspection/) to read the values:
+Instead, you can use [Introspection](https://graphql.org/learn/introspection/) to read the values of the `AssetType` enum:
 
 ```graphql
 query GET_ASSET_TYPES {
