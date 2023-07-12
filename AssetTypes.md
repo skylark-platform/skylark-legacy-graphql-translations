@@ -11,6 +11,10 @@ Contents:
 - [List Asset Types](#list-asset-types)
 - [List Assets by Asset Type](#list-assets-by-asset-type)
 
+Related:
+
+- [Assets](./Assets.md)
+
 ---
 
 ## List Asset Types

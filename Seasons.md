@@ -4,7 +4,8 @@ Contents:
 
 - [Get Season](#get-season)
 - [List Seasons](#list-seasons)
-- [Create/Update Season](#createupdate-season)
+- [Create Season](#create-season)
+- [Update Season](#update-season)
 - [Delete Season](#delete-season)
 
 ---
@@ -19,8 +20,8 @@ Contents:
 
 ```graphql
 query MyQuery {
-  getSeason(uid: "01H502WM10WXSCH68J5ZEW7N7Q", language: "en") {
-  # getSeason(external_id: "seas_5cd1826f045449c5afc25798a247b7bd", language: "it") {
+  getSeason(uid: "01H53QP93EVAFMBVCDTD81KVPY", language: "en") {
+  # getSeason(external_id: "seas_955a7cf27167466fa0191793a27f3c25", language: "it") {
     internal_title
     title
     synopsis
@@ -29,6 +30,25 @@ query MyQuery {
     tags {
       objects {
         uid
+      }
+    }
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "getSeason": {
+      "internal_title": "The Magic of Houdini",
+      "title": "The Magic of Houdini",
+      "synopsis": "English comedian Alan Davies presents the extraordinary life and legacy of Hungarian-born illusionist and stunt performer Harry Houdini.",
+      "season_number": null,
+      "number_of_episodes": null,
+      "tags": {
+        "objects": []
       }
     }
   }
@@ -72,7 +92,7 @@ query MyQuery {
 
 ```graphql
 query MyQuery {
-  listSeason(language: "en", next_token: "", limit: 10) {
+  listSeason(language: "en", next_token: "", limit: 1) {
     next_token
     objects {
       slug
@@ -96,12 +116,38 @@ query MyQuery {
 
 #### Output
 
-Coming soon...
+```json
+{
+  "data": {
+    "listSeason": {
+      "next_token": "eyJfbGlzdF9rZXkiOiAicGJibDRlam9semh3emU3NHphZTJheHJ0am0jU2Vhc29ufGxhbmcjZW4iLCAiX2lkIjogInBiYmw0ZWpvbHpod3plNzR6YWUyYXhydGptIzAxSDUzUEhBVkIxSFpKUUNORkc5QUFYUEozIiwgIl9zayI6ICJwYmJsNGVqb2x6aHd6ZTc0emFlMmF4cnRqbSMwMUg1M1BIQVZCMUhaSlFDTkZHOUFBWFBKMyNlbiJ9",
+      "objects": [
+        {
+          "slug": "POFO-8682546",
+          "internal_title": "Power and Football - Season 1",
+          "title": "Power and Football",
+          "synopsis": "Power and Football explores how football unites the World like no other sport - kicking down the barriers of language, culture and race.",
+          "brands": {
+            "objects": [
+              {
+                "uid": "01H53QSQAGFGSF0R26QTY5T4MC"
+              }
+            ]
+          },
+          "tags": {
+            "objects": []
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 
 ---
 
-## Create/Update Season
+## Create Season
 
 ### Legacy Output
 
@@ -153,6 +199,52 @@ mutation MyMutation {
   ) {
     uid
   }
+}
+```
+
+---
+
+## Update Season
+
+### GraphQL
+
+```graphql
+mutation MyMutation {
+  updateSeason(
+    uid: "01H53QSQAGFGSF0R26QTY5T4MC",
+    language: "en"
+    season: {
+      external_id: "seas_ext_id",
+      slug: "current-both-d",
+      synopsis: "",
+      internal_title: "",
+      availability: {
+        link: "{AVAILABILITY_UID}"
+      },
+      relationships: {
+        brands: {
+          link: "{SINGLE_BRAND_UID}"
+        },
+        tags: {
+          link: ["YOU", "CAN", "ALSO", "SEND", "ARRAYS"]
+        }
+      }
+    }
+  ) {
+    uid
+  }
+}
+```
+
+or using External ID:
+
+```graphql
+mutation MyMutation {
+  updateSeason(
+    external_id: "seas_ext_id"
+    language: "en"
+    ..rest
+  )
 }
 ```
 
