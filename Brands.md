@@ -20,19 +20,19 @@ Contents:
 
 ```graphql
 query MyQuery {
-  getSkylarkAsset(uid: "01H53N4EXWDDKWMW39YZJ44CET", language: "en") {
-  # getSkylarkAsset(external_id: "asse_4e4a9d0e3c054790886684b924e1d13c", language: "en") {
+  getBrand(uid: "01H53QSS3GP6DX9YDH83FARHTC", language: "en") {
+  # getBrand(external_id: "bran_4e4a9d0e3c054790886684b924e1d13c", language: "en") {
     external_id
     internal_title
     title
     slug
-    duration
+    synopsis
     tags {
       objects {
         uid
       }
     }
-    episodes {
+    seasons {
       objects {
         uid
       }
@@ -46,19 +46,22 @@ query MyQuery {
 ```json
 {
   "data": {
-    "getSkylarkAsset": {
-      "external_id": "asse_4e4a9d0e3c054790886684b924e1d13c",
-      "internal_title": "The Joy of Winning",
-      "title": "The Joy of Winning",
-      "slug": "the-joy-of-winning",
-      "duration": 3189,
+    "getBrand": {
+      "external_id": "bran_72d13e598da7466ba30ef8e072310ce4",
+      "internal_title": "Genius of the Ancient World",
+      "title": "Genius of the Ancient World",
+      "slug": "GOAW-6326195",
+      "synopsis": "Between 550 – 450 BC Buddha, Confucius and Socrates each thrust populations towards a new age of reason – so how did they do it?",
       "tags": {
         "objects": []
       },
-      "episodes": {
+      "seasons": {
         "objects": [
           {
-            "uid": "01H53N53P6SR7EK5FWVRC7Z1P1"
+            "uid": "01H53PHYYC4ME8XDX0ZFYRBH4Y"
+          },
+          {
+            "uid": "01H53PHYWNWHZWR5QC6F33T764"
           }
         ]
       }
@@ -73,27 +76,18 @@ query MyQuery {
 
 ### Legacy
 
-`/api/assets/?fields=`
+`/api/brands/?fields=`
 
 
 #### Output
 
 ```json
 {
-   "tags":[
-      {
-         "schedule_urls":[
-            "/api/schedules/sche_aeba759af1f44c9ca75564c363c870b6/"
-         ],
-         "tag_url":"/api/tags/tag__7e83c349050b4369b960479039609dbe/"
-      }
-   ],
    "schedule_urls":[
       "/api/schedules/sche_fc5be8ad9bdd4bb889c35cdf51d369e9/"
    ],
    "slug":"current-both-d",
    "title":"current Season BOTH D",
-   "parent_url":"/api/brands/bran_5cd1826f045449c5afc25798a247b7bd/",
    "language":"en",
    "alternate_synopsis":"",
    "name":""
@@ -104,14 +98,14 @@ query MyQuery {
 
 ```graphql
 query MyQuery {
-  listSkylarkAsset(language: "en", next_token: "", limit: 1) {
+  listBrand(language: "en", next_token: "", limit: 1) {
     next_token
     objects {
       external_id
       internal_title
       title
       slug
-      duration
+      synopsis
       tags {
         objects {
           uid
@@ -132,24 +126,20 @@ query MyQuery {
 ```json
 {
   "data": {
-    "listSkylarkAsset": {
-      "next_token": "eyJfbGlzdF9rZXkiOiAicGJibDRlam9semh3emU3NHphZTJheHJ0am0jU2t5bGFya0Fzc2V0fGxhbmcjZW4iLCAiX2lkIjogInBiYmw0ZWpvbHpod3plNzR6YWUyYXhydGptIzAxSDUzTVRRNjhENDg1MU5ENDBZR1BYNzVQIiwgIl9zayI6ICJwYmJsNGVqb2x6aHd6ZTc0emFlMmF4cnRqbSMwMUg1M01UUTY4RDQ4NTFORDQwWUdQWDc1UCNlbiJ9",
+    "listBrand": {
+      "next_token": "eyJfbGlzdF9rZXkiOiAicGJibDRlam9semh3emU3NHphZTJheHJ0am0jQnJhbmR8bGFuZyNlbiIsICJfaWQiOiAicGJibDRlam9semh3emU3NHphZTJheHJ0am0jMDFINTNRUzlEUTZISlI2VE1YQ0YyUUtOMjMiLCAiX3NrIjogInBiYmw0ZWpvbHpod3plNzR6YWUyYXhydGptIzAxSDUzUVM5RFE2SEpSNlRNWENGMlFLTjIzI2VuIn0=",
       "objects": [
         {
-          "external_id": "asse_5cab5445a0804af18630bbcacea18466",
-          "internal_title": "Aguska Mnich",
-          "title": "Aguska Mnich",
-          "slug": "aguska-mnich",
-          "duration": 684,
+          "external_id": "bran_7067eacc7e87468dac294ab5a85a565b",
+          "internal_title": "Can a Computer Write a Hit Musical?",
+          "title": "Can a Computer Write a Hit Musical?",
+          "slug": "CSSH-7010592",
+          "synopsis": "A group of scientists use the computer programme “Android Lloyd Weber” to create a West End musical.",
           "tags": {
             "objects": []
           },
           "episodes": {
-            "objects": [
-              {
-                "uid": "01H53N4PMPJKVM1PBJXC6G8JVC"
-              }
-            ]
+            "objects": []
           }
         }
       ]
@@ -167,24 +157,10 @@ query MyQuery {
 
 ```json
 {
-   "tags":[
-      {
-         "schedule_urls":[
-            "/api/schedules/sche_aeba759af1f44c9ca75564c363c870b6/"
-         ],
-         "tag_url":"/api/tags/tag__7e83c349050b4369b960479039609dbe/"
-      }
-   ],
-   "schedule_urls":[
-      "/api/schedules/sche_fc5be8ad9bdd4bb889c35cdf51d369e9/"
-   ],
-   "title":"",
-   "parent_url":"",
+   "title":"current Season BOTH D",
    "language":"en",
    "alternate_synopsis":"",
-   "name":"",
-   "asset_type_url":"",
-   "entitlement":"/distribution/*"
+   "name":""
 }
 ```
 
@@ -192,18 +168,18 @@ query MyQuery {
 
 ```graphql
 mutation MyMutation {
-  createSkylarkAsset(
+  createBrand(
     language: "en"
-    skylark_asset: {
-      external_id: "asse_ext_id",
+    brand: {
+      external_id: "bran_ext_id",
       slug: "current-both-d",
       internal_title: "",
       availability: {
         link: "{AVAILABILITY_UID}"
       },
       relationships: {
-        brands: {
-          link: "{SINGLE_BRAND_UID}"
+        seasons: {
+          link: "{SINGLE_SEASON_UID}"
         },
         tags: {
           link: ["YOU", "CAN", "ALSO", "SEND", "ARRAYS"]
@@ -227,7 +203,7 @@ mutation MyMutation {
 ```json
 {
   "data": {
-    "createSkylarkAsset": {
+    "createBrand": {
       "uid": "01H54RN5MWZYFG4SSKXPJ55X3S",
       "slug": "current-both-d",
       "tags": {
@@ -246,19 +222,19 @@ mutation MyMutation {
 
 ```graphql
 mutation MyMutation {
-  updateSkylarkAsset(
+  updateBrand(
     uid: "01H54RN5MWZYFG4SSKXPJ55X3S"
     language: "en"
-    skylark_asset: {
-      external_id: "asse_ext_id",
+    brand: {
+      external_id: "bran_ext_id",
       slug: "current-both-d",
       internal_title: "",
       availability: {
         link: "{AVAILABILITY_UID}"
       },
       relationships: {
-        brands: {
-          link: "{SINGLE_BRAND_UID}"
+        seasons: {
+          link: "{SINGLE_SEASON_UID}"
         },
         tags: {
           link: ["YOU", "CAN", "ALSO", "SEND", "ARRAYS"]
@@ -281,8 +257,8 @@ or using External ID:
 
 ```graphql
 mutation MyMutation {
-  updateSkylarkAsset(
-    external_id: "asse_ext_id"
+  updateBrand(
+    external_id: "bran_ext_id"
     language: "en"
     ..rest
   )
@@ -294,7 +270,7 @@ mutation MyMutation {
 ```json
 {
   "data": {
-    "createSkylarkAsset": {
+    "updateBrand": {
       "uid": "01H54RN5MWZYFG4SSKXPJ55X3S",
       "slug": "current-both-d",
       "tags": {

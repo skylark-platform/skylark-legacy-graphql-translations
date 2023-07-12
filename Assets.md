@@ -298,7 +298,7 @@ mutation MyMutation {
 ```json
 {
   "data": {
-    "createSkylarkAsset": {
+    "updateSkylarkAsset": {
       "uid": "01H54RN5MWZYFG4SSKXPJ55X3S",
       "slug": "current-both-d",
       "tags": {
