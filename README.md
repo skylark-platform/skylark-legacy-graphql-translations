@@ -8,9 +8,14 @@ Full API documentation: https://docs.skylarkplatform.com/
 
 *Note: Recommend you read the ["Read this first"](#read-this-first) section as it covers a few common parts of Skylark that isn't covered in the individual files.*
 
+- [Assets](./Assets.md)
+- [Asset Types](./AssetTypes.md)
+- [Episodes](./Episodes.md)
 - [Seasons](./Seasons.md)
+- [Brands](./Brands.md)
 - [Tags](./Tags.md)
 - [Tag Categories](./TagCategories.md)
+- [Availability](./Availability.md)
 
 ## Read this first:
 
