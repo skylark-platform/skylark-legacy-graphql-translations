@@ -1,4 +1,4 @@
-# Macademia Skylark GraphQL Translations
+# Skylark Legacy -> Skylark GraphQL Translations
 
 Collection of documents translating Skylark Legacy's API calls to Skylark's GraphQL Queries.
 
@@ -8,14 +8,17 @@ Full API documentation: https://docs.skylarkplatform.com/
 
 *Note: Recommend you read the ["Read this first"](#read-this-first) section as it covers a few common parts of Skylark that isn't covered in the individual files.*
 
-- [Assets](./Assets.md)
-- [Asset Types](./AssetTypes.md)
-- [Episodes](./Episodes.md)
-- [Seasons](./Seasons.md)
-- [Brands](./Brands.md)
-- [Tags](./Tags.md)
-- [Tag Categories](./TagCategories.md)
-- [Availability](./Availability.md)
+- Skylark Builtins
+  - [Availability](./Availability.md)
+  - [Assets](./Assets.md)
+  - [Asset Types](./AssetTypes.md)
+  - [Tags](./Tags.md)
+- Other
+  - [Episodes](./Episodes.md)
+  - [Seasons](./Seasons.md)
+  - [Brands](./Brands.md)
+  - [Tag Categories](./TagCategories.md)
+
 
 ## Read this first:
 
