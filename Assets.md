@@ -45,7 +45,7 @@ query MyQuery {
 }
 ```
 
-#### Response
+#### Response
 
 ```json
 {

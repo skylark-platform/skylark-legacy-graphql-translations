@@ -36,7 +36,7 @@ query MyQuery {
 }
 ```
 
-#### Response
+#### Response
 
 ```json
 {
@@ -206,7 +206,7 @@ mutation MyMutation {
 
 ## Update Season
 
-### GraphQL
+### GraphQL
 
 ```graphql
 mutation MyMutation {
